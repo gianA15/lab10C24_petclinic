@@ -43,8 +43,8 @@ public class OwnerServiceBusquedaTest {
 		}
 		logger.info("" + owner);
 
-		assertEquals(first_name, owner.getName());
-		assertEquals(NAME, owner.getFirstname());
+		assertEquals(first_name, owner.getFirstname());
+		assertEquals(first_name, owner.getFirstname());
 
 
 	}
@@ -57,5 +57,13 @@ public class OwnerServiceBusquedaTest {
 	private void assertEquals(String nAME, String firstname) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public OwnerService getOwnerService() {
+		return ownerService;
+	}
+
+	public void setOwnerService(OwnerService ownerService) {
+		this.ownerService = ownerService;
 	}
 }

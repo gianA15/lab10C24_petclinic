@@ -1,5 +1,3 @@
-
-
 package com.tecsup.petclinic.repositories;
 
 import java.util.List;

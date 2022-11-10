@@ -44,6 +44,18 @@ public class OwnerServiceBusquedaTest {
 		logger.info("" + owner);
 
 		assertEquals(first_name, owner.getName());
+		assertEquals(NAME, owner.getFirstname());
 
+
+	}
+
+	private void fail(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void assertEquals(String nAME, String firstname) {
+		// TODO Auto-generated method stub
+		
 	}
 }

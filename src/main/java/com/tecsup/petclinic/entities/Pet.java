@@ -16,71 +16,86 @@ import javax.persistence.Id;
 @Entity(name = "pets")
 public class Pet {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	private String name;
-	@Column(name = "type_id")
-	private int typeId;
-	@Column(name = "owner_id")
-	private int ownerId;
-	private Date birth_date;
-	
-	public Pet() {
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String name;
+    @Column(name = "type_id")
+    private int typeId;
+    @Column(name = "owner_id")
+    private int ownerId;
 
-	public Pet(long id, String name, int type_id, int owner_id) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.typeId = type_id;
-		this.ownerId = owner_id;
-	}
+    @Column(name = "birth_date")
+    //@DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",  timezone = "GMT+8")
+    private Date birthDate;
 
-	public Pet(String name, int type_id, int owner_id) {
-		super();
-		this.name = name;
-		this.typeId = type_id;
-		this.ownerId = owner_id;
-	}
+    public Pet() {
+    }
 
-	public long getId() {
-		return id;
-	}
+    public Pet(long id, String name, int type_id, int owner_id, Date birth_date) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.typeId = type_id;
+        this.ownerId = owner_id;
+        this.birthDate = birth_date;
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public Pet(String name, int type_id, int owner_id, Date birth_date) {
+        super();
+        this.name = name;
+        this.typeId = type_id;
+        this.ownerId = owner_id;
+        this.birthDate = birth_date;
 
-	public String getName() {
-		return name;
-	}
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public int getTypeId() {
-		return typeId;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public void setTypeId(int type_id) {
-		this.typeId = type_id;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getOwnerId() {
-		return ownerId;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setOwnerId(int owner_id) {
-		this.ownerId = owner_id;
-	}
+    public int getTypeId() {
+        return typeId;
+    }
 
-	@Override
-	public String toString() {
-		return "Pet [id=" + id + ", name=" + name + ", typeId=" + typeId + ", ownerId=" + ownerId + ", birth_date="
-				+ birth_date + "]";
-	}
+    public void setTypeId(int type_id) {
+        this.typeId = type_id;
+    }
+
+    public int getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(int owner_id) {
+        this.ownerId = owner_id;
+    }
+
+    @Override
+    public String toString() {
+        return "Pet [id=" + id + ", name=" + name + ", typeId=" + typeId + ", ownerId=" + ownerId + ", birthDate="
+                + birthDate + "]";
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
 
 
 

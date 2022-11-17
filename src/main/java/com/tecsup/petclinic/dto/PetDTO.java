@@ -6,6 +6,12 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+
+/**
+ * 
+ * @author jgomezm
+ *
+ */
 public class PetDTO {
 
 	private long id;

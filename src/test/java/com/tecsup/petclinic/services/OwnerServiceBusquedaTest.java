@@ -58,4 +58,12 @@ public class OwnerServiceBusquedaTest {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public OwnerService getOwnerService() {
+		return ownerService;
+	}
+
+	public void setOwnerService(OwnerService ownerService) {
+		this.ownerService = ownerService;
+	}
 }

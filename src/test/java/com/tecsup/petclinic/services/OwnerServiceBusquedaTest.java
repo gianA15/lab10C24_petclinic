@@ -43,8 +43,8 @@ public class OwnerServiceBusquedaTest {
 		}
 		logger.info("" + owner);
 
-		assertEquals(first_name, owner.getName());
-		assertEquals(NAME, owner.getFirstname());
+		assertEquals(first_name, owner.getFirstname());
+		assertEquals(first_name, owner.getFirstname());
 
 
 	}
